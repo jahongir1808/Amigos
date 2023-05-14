@@ -13,12 +13,14 @@
   --bg-light: #f9f8f7;
   --partnersCard-bg: #f9f8f7;
   --bg-white: #ffffff;
+  --color-black1: #000000;
   --color-brown: #ba8d5b;
   --color-blue: #607987;
   --color-green: #0eb182;
   --color-black: #0f1826;
   --inpBorder-color: #dadada;
   --inBg-color: #f7f7f5;
+  --themetoggle-color: #f5f5f5;
   --font-color:#000000;
 }
 body.dark {
@@ -29,6 +31,9 @@ body.dark {
   --bg-light: #0f1826;
   --font-color:#FFFFFF;
   --coursesCard-bg: #021923;
+  --themetoggle-color: #272727;
+  --color-black1: #ffffff;
+  --color-black: #ffffff;
 }
 li{
   list-style: none;
@@ -44,6 +49,9 @@ button{
   max-width: 1246px;
   padding: 0 32px;
   margin: 0 auto;
+  @media (max-width: 550px) {
+    padding: 0 16px;
+  }
 }
 
 
