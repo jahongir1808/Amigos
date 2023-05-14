@@ -938,6 +938,7 @@ header nav .nav__buttons button:last-child span {
   color: var(--color-blue);
 }
 #courses .courses-items {
+  padding: 30px;
   display: flex;
   gap: 33px;
 }
