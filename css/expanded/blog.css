@@ -13,7 +13,7 @@
   --bg-dark: #f1f0ee;
   --bg-navDark: #f1f0ee;
   --bg-light: #f9f8f7;
-  --coursesCard-bg: #f9f8f7;
+  --partnersCard-bg: #f9f8f7;
   --bg-white: #ffffff;
   --color-brown: #ba8d5b;
   --color-blue: #607987;
@@ -72,13 +72,13 @@ button {
   font-family: "Lato";
   src: url(/assets/fonts/Lato-Black.ttf);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 @font-face {
   font-family: "Lato";
   src: url(/assets/fonts/Lato-Bold.ttf);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 }
 @font-face {
   font-family: "Lato";
