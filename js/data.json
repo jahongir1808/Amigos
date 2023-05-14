@@ -6,7 +6,7 @@
         "date" : "19-aprel, 2023",
         "views" : 119,
         "type" : "Musobaqa", 
-        "image" : ""
+        "image" : "../assets/images/blog/blog-img-1.png"
     },
     {
         "id" : 1,
@@ -15,7 +15,7 @@
         "date" : "19-aprel, 2023",
         "views" : 92,
         "type" : "Master-klass", 
-        "image" : ""
+        "image" : "../assets/images/blog/blog-img-2.png"
     },
     {
         "id" : 2,
@@ -24,7 +24,7 @@
         "date" : "19-aprel, 2023",
         "views" : 109,
         "type" : "Musobaqa", 
-        "image" : ""
+        "image" : "../assets/images/blog/blog-img-3.png"
     },
     {
         "id" : 3,
@@ -33,7 +33,7 @@
         "date" : "19-aprel, 2023",
         "views" : 101,
         "type" : "Musobaqa", 
-        "image" : ""
+        "image" : "../assets/images/blog/blog-img-4.png"
     },
     {
         "id" : 4,
@@ -42,7 +42,7 @@
         "date" : "19-aprel, 2023",
         "views" : 187,
         "type" : "Master-klass", 
-        "image" : ""
+        "image" : "../assets/images/blog/blog-img-5.png"
     },
     {
         "id" : 5,
@@ -51,6 +51,6 @@
         "date" : "11-aprel, 2023",
         "views" : 270,
         "type" : "Musobaqa", 
-        "image" : ""
+        "image" : "../assets/images/blog/blog-img-6.png"
     }
 ]
