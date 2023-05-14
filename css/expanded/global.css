@@ -19,3 +19,9 @@ body.dark {
   --bg-light: #0f1826;
   --coursesCard-bg: #021923;
 }
+
+.container {
+  max-width: 1246px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
