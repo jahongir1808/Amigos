@@ -484,6 +484,12 @@ header nav .nav__buttons button:last-child span {
 
 #courses {
   padding-top: 32px;
+  padding-bottom: 50px;
+  background-color: var(--bg-white);
+  font-family: Lato;
+}
+body.dark #courses {
+  background-color: var(--bg-dark-2);
 }
 #courses .courses__navlink {
   font-style: normal;
@@ -614,6 +620,58 @@ body.dark #courses .courses__filter-button.active {
   background-color: #ba8d5b;
   color: white;
 }
+#courses .courses__card {
+  padding: 16px;
+  background-color: var(--partnersCard-bg);
+}
+body.dark #courses .courses__card {
+  background-color: var(--bg-white);
+}
+#courses .courses__card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 31px;
+}
+#courses .courses__card-header {
+  display: flex;
+  justify-content: space-between;
+}
+#courses .courses__card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--font-color);
+}
+#courses .courses__card-label {
+  background-color: #D1D1D1;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 4px;
+  border: none;
+  padding: 5px 12px;
+}
+#courses .courses__card-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--font-color);
+  margin-top: 21px;
+  margin-bottom: 16px;
+}
+#courses .courses__card-stats {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #BA8D5B;
+  display: block;
+}
+#courses .courses__image-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
 
 @media screen and (max-width: 768px) {
   .courses__header {
@@ -638,6 +696,11 @@ body.dark #courses .courses__filter-button.active {
   .courses__header-button {
     max-width: unset !important;
     width: 10% !important;
+  }
+  .courses__card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
   }
 }
 @media screen and (max-width: 425px) {
