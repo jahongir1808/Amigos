@@ -7,11 +7,58 @@
   flex-direction: $fd;
 }
 
-@mixin btn($padding, $fontSize, $fontWeight) {
+@mixin btnBrown($padding, $fontSize, $fontWeight) {
   padding: $padding;
   font-size: $fontSize;
   font-weight: $fontWeight;
   background-color: #ba8d5b;
+  border-radius: 32px;
+  border: none;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  transition: .1s linear;
+  border: 2px solid transparent;
+  -webkit-transition: .1s linear;
+  -moz-transition: .1s linear;
+  -ms-transition: .1s linear;
+  -o-transition: .1s linear;
+  color: white;
+  body.dark &{
+    color: black;
+  }
+  &:hover{
+    background-color: #F5F5F5;
+    color: black;
+    border-color: #ba8d5b;
+  }
+  &:active{
+    border-color: transparent;
+    background-color: #ba8d5b;
+    color: white;
+  }
+}
+@mixin btnWhite($padding, $fontSize, $fontWeight) {
+  padding: $padding;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  background-color: #F7F7F5;
+  border-radius: 32px;
+  color: black;
+  border: 2px solid transparent;
+  transition: .1s linear;
+  -webkit-transition: .1s linear;
+  -moz-transition: .1s linear;
+  -ms-transition: .1s linear;
+  -o-transition: .1s linear;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  &:hover{
+    border-color: #ba8d5b;
+  }
 }
 
 @mixin sectionHead {
