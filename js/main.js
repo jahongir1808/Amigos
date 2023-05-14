@@ -1,4 +1,5 @@
 const lists = document.querySelectorAll(".headerListItem");
+const lists2 = document.querySelectorAll(".headerListItem2");
 const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 const themeToggler = document.querySelectorAll("#themeToggle");
@@ -46,7 +47,7 @@ openNav.addEventListener("click", () => {
   document.querySelector(".nav__menu").style.right = "0%";
 });
 closeNav.addEventListener("click", () => {
-  document.querySelector(".nav__menu-wrapper").style.zIndex = "-1";
+  document.querySelector(".nav__menu-wrapper").style.zIndex = "-9999";
   document.querySelector(".nav__menu-wrapper").style.right = "-150%";
   document.querySelector(".nav__menu-wrapper").style.backdropFilter =
     "brightness(100%)";
@@ -55,12 +56,20 @@ closeNav.addEventListener("click", () => {
 
 lists.forEach((list) => {
   list.addEventListener("click", () => {
-    lists.forEach((list2) => {
-      list2.classList.remove("open");
-    });
-    list.classList.add("open");
-  });
-});
+    lists.forEach(list2 => {
+      list2.classList.remove("open")
+    })
+    list.classList.add("open")
+  })
+})
+lists2.forEach(list => {
+  list.addEventListener("click", () => {
+    lists2.forEach(list2 => {
+      list2.classList.remove("open")
+    })
+    list.classList.add("open")
+  })
+})
 
 const videoOne = document.querySelector(".review-videoOne");
 const videoTwo = document.querySelector(".review-videoTwo");
