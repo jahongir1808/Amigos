@@ -19,12 +19,15 @@
   --color-black: #0f1826;
   --inpBorder-color: #dadada;
   --inBg-color: #f7f7f5;
+  --font-color:#000000;
 }
 body.dark {
   --bg-dark: #09111b;
+  --bg-dark-2: #1E1E1E;
   --bg-navDark: #0f1826;
   --bg-white: #021923;
   --bg-light: #0f1826;
+  --font-color:#FFFFFF;
   --coursesCard-bg: #021923;
 }
 li{

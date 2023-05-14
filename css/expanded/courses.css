@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -187,3 +188,6 @@ header nav .nav__buttons button:last-child:active {
 header nav .nav__buttons button:last-child:active svg path {
   fill: white;
 }
+=======
+@use "../global";
+>>>>>>> 93d5c25f26f6c8f9a90839f94feec24143648cc4
