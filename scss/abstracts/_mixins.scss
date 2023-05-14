@@ -1,7 +1,7 @@
 @use "../base/typography";
 @use "../abstracts/variables" as *;
 
-@mixin df($jc, $ai, $fd) {
+@mixin df($jc: start, $ai: start, $fd: row) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
