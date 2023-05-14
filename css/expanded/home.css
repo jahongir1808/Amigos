@@ -1144,7 +1144,7 @@ header nav .nav__buttons button:last-child span {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--bg-white);
+  background: #FFFFFF;
   border-radius: 100px;
 }
 @media (max-width: 500px) {
@@ -1223,4 +1223,4 @@ header nav .nav__buttons button:last-child span {
   line-height: 22px;
   letter-spacing: -0.24px;
   color: #7cd1ac;
-}/*# sourceMappingURL=home.css.map */
+}
