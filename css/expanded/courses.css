@@ -7,6 +7,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: Lato;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
@@ -794,4 +803,4 @@ header nav .nav__buttons button:last-child span {
   header nav .nav__buttons button:last-child {
     display: flex;
   }
-}
+}/*# sourceMappingURL=courses.css.map */

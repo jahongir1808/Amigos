@@ -1,30 +1,26 @@
 @use "../global";
+@use '../abstracts/mixins' as *;
 
 #blog{
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
     font-family: Lato;
     body.dark & {
         background-color: var(--bg-dark-2);
     }
-    
+    #blog-data-wrapper{
+        margin-top: 64px;
+    }
     .blog{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
-        cursor: pointer;
-
-        .blog__image:hover{
-            transform: scale(1.1);
-        }
-
+        
         &__item{
             z-index: 0;
             max-width: 100%;
             position: relative;
             width: 100%;
             margin-bottom: 36px;
-            .blog__type{
-            }
         }
         &__type{
             position: absolute;
@@ -37,10 +33,16 @@
             border-radius: 4px;
         }
         &__image{
+            cursor: pointer;
             width: 100%;
             height: auto;
             transition: .3s ease-in-out;
-
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+            
+            
             &-wrapper{
                 width: 100%;
                 height: auto;
@@ -68,6 +70,10 @@
             
             &-icon{
                 margin-right: 6px;
+                fill: rgba(0, 0, 0, 0.35);
+                body.dark & {
+                    fill: #FFFFFF;
+                }
             }
         }
         
@@ -92,6 +98,81 @@
             body.dark & {
                 color: var(--font-color);
             }
+        }
+        
+        &__loadMore{
+            display: block;
+            margin: 0 auto;
+            @include btnBrown(13px 46px, 16px, 700);
+            margin-top: 30px;
+        }
+        
+        &__navlink {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #C4C4C4;
+            &.active{
+                color: #BA8D5B;
+            }
+            &-wrapper {
+                margin: 32px 0;
+                display: flex;
+                align-items: center;
+            }
+            &-item{
+                margin-right: 10px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        &__filter{
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                width: 0 !important;
+            }
+            &-button{
+                @include btnWhite(16px 26px, 14px, 600);
+                margin-right: 16px;
+                transition: .3;
+                &.active{
+                    @include btnBrown(16px 26px, 14px, 600)
+                }
+            }
+        }
+        &__empty{
+            display: block;
+            font-size: 20px;
+            text-align: center;
+            color: var(--font-color);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #blog{
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    #blog{
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
     }
 }
