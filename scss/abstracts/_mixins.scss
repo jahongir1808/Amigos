@@ -1,0 +1,13 @@
+@mixin df($jc, $ai, $fd) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+@mixin btn($padding, $fontSize, $fontWeight){
+    padding: $padding;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    background-color: #BA8D5B;
+}
