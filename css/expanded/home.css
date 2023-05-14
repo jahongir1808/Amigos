@@ -1070,6 +1070,9 @@ header nav .nav__buttons button:last-child span {
   filter: contrast(100%);
 }
 
+#reviews {
+  background-color: var(--bg-white);
+}
 #reviews .reviews-head h1 {
   font-family: Lato;
   font-weight: 800;

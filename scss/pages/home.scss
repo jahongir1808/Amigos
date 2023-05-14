@@ -215,6 +215,7 @@
 // REVIEWS
 
 #reviews {
+  background-color: var(--bg-white);
   .reviews-head {
     h1 {
       @include sectionHead;
