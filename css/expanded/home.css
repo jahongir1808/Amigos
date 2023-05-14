@@ -153,7 +153,7 @@ header nav .nav__menu-wrapper {
     z-index: -1;
     height: 100vh;
     top: 0;
-    left: -150%;
+    right: -150%;
   }
 }
 header nav .nav__menu {
@@ -478,7 +478,7 @@ header nav .nav__buttons button:last-child span {
 }
 
 #advantages {
-  padding: 48px 0;
+  padding: 48px 1rem;
   background-color: var(--bg-white);
 }
 @media (min-width: 390px) {

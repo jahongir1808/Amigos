@@ -46,7 +46,7 @@ openNav.addEventListener("click", () => {
 })
 closeNav.addEventListener("click", () => {
   document.querySelector(".nav__menu-wrapper").style.zIndex = "-1";
-  document.querySelector(".nav__menu-wrapper").style.left = "-150%";
+  document.querySelector(".nav__menu-wrapper").style.right = "-150%";
   document.querySelector(".nav__menu-wrapper").style.backdropFilter = "brightness(100%)";
   document.querySelector(".nav__menu").style.right = "-150%";
 })
