@@ -12,12 +12,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
-        cursor: pointer;
-
-        .blog__image:hover{
-            transform: scale(1.1);
-        }
-
+        
         &__item{
             z-index: 0;
             max-width: 100%;
@@ -36,10 +31,16 @@
             border-radius: 4px;
         }
         &__image{
+            cursor: pointer;
             width: 100%;
             height: auto;
             transition: .3s ease-in-out;
-
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+            
+            
             &-wrapper{
                 width: 100%;
                 height: auto;
@@ -68,6 +69,10 @@
             
             &-icon{
                 margin-right: 6px;
+                fill: rgba(0, 0, 0, 0.35);
+                body.dark & {
+                    fill: #FFFFFF;
+                }
             }
         }
         

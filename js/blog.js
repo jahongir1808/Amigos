@@ -51,6 +51,11 @@ const createElement = (item) => {
     desc.textContent = item?.description;
     type.textContent = item?.type;
     views.textContent = item?.views;
+    // viewsWrapper.innerHTML= ` 
+    // <svg>
+    //   <use xlink:href="${svg}"></use>
+    // </svg>
+    // <span class="blog__views">${item?.views}</span>`
     eyeImage.setAttribute('src',  '../assets/images/eye.svg');
     date.textContent = item?.date;
     

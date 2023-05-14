@@ -69,12 +69,6 @@ body.dark #blog {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
-  cursor: pointer;
-}
-
-#blog .blog .blog__image:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 #blog .blog__item {
@@ -98,10 +92,16 @@ body.dark #blog {
 }
 
 #blog .blog__image {
+  cursor: pointer;
   width: 100%;
   height: auto;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+#blog .blog__image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #blog .blog__image-wrapper {
@@ -140,6 +140,11 @@ body.dark #blog .blog__header-wrapper {
 
 #blog .blog__views-icon {
   margin-right: 6px;
+  fill: rgba(0, 0, 0, 0.35);
+}
+
+body.dark #blog .blog__views-icon {
+  fill: #FFFFFF;
 }
 
 #blog .blog__title {
