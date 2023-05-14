@@ -1214,7 +1214,7 @@ const partners = [
 
 function getpartnersCard(img) {
   return `
-  <div class="partners-item">
+  <div class="item partners-item">
     ${img}
   </div>
   `;
@@ -1225,7 +1225,6 @@ let partnersCard = document.querySelector(".partners-items");
 function getpartnersCards(products) {
   partnersCard.innerHTML = "";
   for (el of products) {
-    console.log(el);
     partnersCard.innerHTML += getpartnersCard(el.image);
   }
 }
