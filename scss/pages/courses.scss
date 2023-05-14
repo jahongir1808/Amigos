@@ -1,1 +1,134 @@
 @use "../global";
+@use '../abstracts/mixins' as *;
+
+#courses{
+    padding-top: 32px;
+    .courses{
+        &__navlink {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #C4C4C4;
+            &.active{
+                color: #BA8D5B;
+            }
+            &-wrapper {
+                margin-bottom: 32px;
+                display: flex;
+                align-items: center;
+            }
+            &-item{
+                margin-right: 10px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            &-title{
+                font-weight: 800;
+                font-size: 32px;
+                line-height: 56px;
+                letter-spacing: -0.64px;
+                color: var(--font-color);
+            }
+            &-search{
+                display: flex;
+                max-width: 350px;
+                width: 100%;
+            }
+            &-input{
+                max-width: 300px;
+                background-color: #f7f7f5;
+                border: none;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                width: 100%;
+                padding: 15px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                display: flex;
+                align-items: center;
+                color: #757575;
+                outline: none;
+            }
+            &-button{
+                max-width: 50px;
+                border: none;
+                width: 100%;
+                background-color: #f7f7f5;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+            }
+        }
+        
+        &__filter{
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                width: 0 !important;
+            }
+            &-button{
+                @include btnWhite(16px 26px, 14px, 600);
+                margin-right: 16px;
+                transition: .3;
+                &.active{
+                    @include btnBrown(16px 26px, 14px, 600)
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .courses{
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            &-title{
+                font-weight: 700;
+                text-align: center;
+                font-size: 28px;
+            }
+
+            &-search{
+                display: flex;
+                max-width: 768px !important;
+                width: 100%;
+            }
+            &-input{
+                max-width: unset !important;
+                width: 90% !important;
+            }
+
+            &-button{
+                max-width: unset !important;
+                width: 10% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .courses{
+        &__header{
+            &-input{
+                width: 80% !important;
+            }
+
+            &-button{
+                width: 20% !important;
+            }
+        }
+    }
+}
