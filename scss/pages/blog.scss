@@ -2,6 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 #blog{
+    padding-top: 32px;
     background-color: var(--bg-white);
     font-family: Lato;
     body.dark & {
@@ -119,7 +120,7 @@
                 color: #BA8D5B;
             }
             &-wrapper {
-                margin: 32px 0;
+                margin-bottom: 32px;
                 display: flex;
                 align-items: center;
             }

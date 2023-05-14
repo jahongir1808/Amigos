@@ -44,10 +44,10 @@
   padding: $padding;
   font-size: $fontSize;
   font-weight: $fontWeight;
-  background-color: #f7f7f5;
+  background-color: var(--bg-white);
   border-radius: 32px;
   font-family: Lato;
-  color: black;
+  color: var(--font-color);
   border: 2px solid transparent;
   transition: 0.1s linear;
   -webkit-transition: 0.1s linear;
