@@ -477,16 +477,16 @@ header nav .nav__buttons button:last-child span {
   padding: 32px 0;
 }
 
-#workplaces {
-  padding: 48px 0;
+#advantages {
+  padding: 48px 1rem;
   background-color: var(--bg-white);
 }
 @media (min-width: 390px) {
-  #workplaces {
+  #advantages {
     padding: 48px 0;
   }
 }
-#workplaces .advantages-head h1 {
+#advantages .advantages-head h1 {
   font-family: Lato;
   font-weight: 800;
   font-size: var(32px);
@@ -498,22 +498,22 @@ header nav .nav__buttons button:last-child span {
   letter-spacing: -0.64px;
   color: var(--color-black);
 }
-#workplaces .advantages-items {
+#advantages .advantages-items {
   padding: 48px 0 16px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 40px 45px;
 }
 @media (min-width: 390px) {
-  #workplaces .advantages-items {
+  #advantages .advantages-items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-#workplaces .advantages-items .advantages-item {
+#advantages .advantages-items .advantages-item {
   display: flex;
   gap: 40px;
 }
-#workplaces .advantages-items .advantages-item h5 {
+#advantages .advantages-items .advantages-item h5 {
   margin-bottom: 14px;
   font-family: Lato;
   font-style: normal;
@@ -527,7 +527,7 @@ header nav .nav__buttons button:last-child span {
   letter-spacing: -0.4px;
   color: var(--color-black);
 }
-#workplaces .advantages-items .advantages-item p {
+#advantages .advantages-items .advantages-item p {
   font-family: Lato;
   font-style: normal;
   font-weight: 400;
@@ -540,12 +540,12 @@ header nav .nav__buttons button:last-child span {
   letter-spacing: -0.28px;
   color: var(--color-blue);
 }
-#workplaces #more {
+#advantages #more {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-#workplaces #more h6 {
+#advantages #more h6 {
   font-family: Lato;
   font-style: normal;
   font-weight: 600;
@@ -558,7 +558,7 @@ header nav .nav__buttons button:last-child span {
   letter-spacing: -0.32px;
   color: var(--color-green);
 }
-#workplaces #more button {
+#advantages #more button {
   display: flex;
   align-items: center;
   padding: 10px 8px;
@@ -567,10 +567,10 @@ header nav .nav__buttons button:last-child span {
   border-radius: 12px;
   transition: 0.3s;
 }
-#workplaces #more button svg path {
+#advantages #more button svg path {
   stroke: #555555;
 }
-#workplaces #more button:hover svg path {
+#advantages #more button:hover svg path {
   stroke: #000000;
 }
 
