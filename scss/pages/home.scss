@@ -32,7 +32,6 @@
     }
     &-photo{
       width: calc(100% - 400px);
-      background-color: green;
       position: relative;
       @media (max-width: 1000px) {
         display: none;

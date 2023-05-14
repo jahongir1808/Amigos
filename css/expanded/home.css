@@ -846,7 +846,6 @@ header nav .nav__buttons button:last-child span {
 }
 #hero .hero__wrapper-photo {
   width: calc(100% - 400px);
-  background-color: green;
   position: relative;
 }
 @media (max-width: 1000px) {
