@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-dark: #f1f0ee;
   --bg-navDark: #f1f0ee;
@@ -20,12 +31,38 @@ body.dark {
   --coursesCard-bg: #021923;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
 .container {
   max-width: 1246px;
   padding: 0 32px;
   margin: 0 auto;
 }
 
+header {
+  background-color: var(--bg-navDark);
+  width: 100%;
+  height: 100px;
+}
+header nav {
+  background-color: green;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
 @font-face {
   font-family: "Lato";
   src: url(../fonts/Lato-Light.ttf);
