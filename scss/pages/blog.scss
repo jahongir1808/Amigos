@@ -1,5 +1,5 @@
 @use "../global";
-@use '../abstracts/mixins';
+@use '../abstracts/mixins' as *;
 
 #blog{
     background-color: var(--bg-light);
