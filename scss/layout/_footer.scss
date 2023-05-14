@@ -1,2 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
+
+footer{
+    width: 100%;
+    background-color: var(--bg-light);
+}
