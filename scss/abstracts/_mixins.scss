@@ -1,0 +1,15 @@
+@function get-button-background($is-bold){
+    @if $is-bold {
+        @return #000;
+    } @else {
+        @return #fff
+    }
+}
+
+@mixin bold-button{
+    background-color: get-button-background(true);
+}
+
+@mixin light-button{
+    background-color: get-button-background(true);
+}

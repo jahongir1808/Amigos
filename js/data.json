@@ -1,0 +1,56 @@
+[
+    {
+        "id" : 0,
+        "title" : "16-aprel kuni «Najot Ta'lim»da SMM menejerlari uchun story management",
+        "description" : "«SMM musobaqasi» bo'lib o'tdi",
+        "date" : "19-aprel, 2023",
+        "views" : 119,
+        "type" : "Musobaqa", 
+        "image" : ""
+    },
+    {
+        "id" : 1,
+        "title" : "Farg'ona filialida «Engineericly» YouTube kanali asoschisi Jahongirmirzo Ibrohimo",
+        "description" : "«Engineericly» YouTube kanali asoschisi Jahongirmirzo Ibrohimov bilan master-klass",
+        "date" : "19-aprel, 2023",
+        "views" : 92,
+        "type" : "Master-klass", 
+        "image" : ""
+    },
+    {
+        "id" : 2,
+        "title" : "SMM-menejer va Grafik dizaynerlar o'rtasidagi «Marketing Team» jamoaviy",
+        "description" : "«Marketing Team» musobaqasi g'oliblari e'lon qilindi",
+        "date" : "19-aprel, 2023",
+        "views" : 109,
+        "type" : "Musobaqa", 
+        "image" : ""
+    },
+    {
+        "id" : 3,
+        "title" : "2-aprel kuni bo'lib o'tgan dasturlash bo'yicha «Algoritmlash» musobaqasi",
+        "description" : "Dasturchilar o'rtasida «Algoritmlash» musobaqasi",
+        "date" : "19-aprel, 2023",
+        "views" : 101,
+        "type" : "Musobaqa", 
+        "image" : ""
+    },
+    {
+        "id" : 4,
+        "title" : "«Iwash» va «Carbon technologies» loyihalari asoschilari bilan «Shaxsiy",
+        "description" : "Otabek Jurayev va Behzodbek Shoyunusovlar bilan master-klass",
+        "date" : "19-aprel, 2023",
+        "views" : 187,
+        "type" : "Master-klass", 
+        "image" : ""
+    },
+    {
+        "id" : 5,
+        "title" : "100 ga yaqin SMM-menejer va grafik dizaynerlar «Marketing Team»",
+        "description" : "«Marketing Team» jamoaviy musobaqasi",
+        "date" : "11-aprel, 2023",
+        "views" : 270,
+        "type" : "Musobaqa", 
+        "image" : ""
+    }
+]
