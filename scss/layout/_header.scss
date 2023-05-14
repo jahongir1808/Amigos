@@ -9,7 +9,15 @@ header{
     position: sticky;
     top: 0;
     z-index: 9999;
+    transition: .2s linear;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
     font-family: Lato;
+    &.shrink{
+        height: 80px;
+    }
     nav{
         height: 100%;
         @include df(space-between, center, row);

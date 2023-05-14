@@ -2,7 +2,15 @@ const lists = document.querySelectorAll(".headerListItem");
 const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 const themeToggler = document.querySelectorAll("#themeToggle");
+const header = document.querySelector("header");
 
+window.addEventListener("scroll", () => {
+  if(pageYOffset > 80){
+    header.classList.add('shrink')
+  } else {
+    header.classList.remove('shrink')
+  }
+})
 themeToggler.forEach(toggle => {
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark")

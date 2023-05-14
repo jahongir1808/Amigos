@@ -103,7 +103,15 @@ header {
   position: sticky;
   top: 0;
   z-index: 9999;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
   font-family: Lato;
+}
+header.shrink {
+  height: 80px;
 }
 header nav {
   height: 100%;
@@ -460,4 +468,9 @@ header nav .nav__buttons button:last-child span {
   header nav .nav__buttons button:last-child {
     display: flex;
   }
+}
+
+#workplaces {
+  height: 500vh;
+  width: 100%;
 }
