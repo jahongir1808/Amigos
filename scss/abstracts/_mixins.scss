@@ -66,7 +66,7 @@
   font-weight: 800;
   font-size: var($font32);
   line-height: 40px;
-  @include df($jc, $ai, $fd);
+  @include df;
   letter-spacing: -0.64px;
   color: var(--color-black);
 }

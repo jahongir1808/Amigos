@@ -1,21 +1,214 @@
 @use "../global";
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
-// WORKPLACES STYLE
-#workplaces {
-  padding: 48px 0;
+// ADVANTAGES STYLE
+
+#advantages {
+  padding: 32px 0;
   background-color: var(--bg-white);
-  .workplaces-head {
+  @media (min-width: 390px) {
+    padding: 48px 0;
+  }
+  .advantages-head {
     h1 {
       @include sectionHead;
     }
   }
-  .workplaces-items {
+  .advantages-items {
     padding: 48px 0 16px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 40px 45px;
-    .workplaces-item {
+    @media (min-width: 390px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .advantages-item {
+      display: flex;
+      gap: 40px;
+      h5 {
+        margin-bottom: 14px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font20;
+        line-height: 30px;
+        @include df(start, center, row);
+        letter-spacing: -0.4px;
+        color: var(--color-black);
+      }
+      p {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $font14;
+        line-height: 20px;
+        @include df(start, center, row);
+        letter-spacing: -0.28px;
+        color: var(--color-blue);
+      }
+    }
+  }
+  #more {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font16;
+      line-height: 20px;
+      @include df;
+      letter-spacing: -0.32px;
+      color: var(--color-green);
+    }
+    button {
+      display: flex;
+      align-items: center;
+      padding: 10px 8px;
+      border: none;
+      background: rgba(186, 141, 91, 0.1);
+      border-radius: 12px;
+      transition: 0.3s;
+      svg {
+        path {
+          stroke: #555555;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+// COURSES
+
+#courses {
+  padding: 32px 0;
+  background-color: var(--bg-light);
+  @media (min-width: 390px) {
+    padding: 48px 0;
+  }
+  .courses-head {
+    h1 {
+      @include sectionHead;
+    }
+    p {
+      padding: 24px 0;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font16;
+      line-height: 24px;
+      @include df;
+      color: var(--color-blue);
+    }
+  }
+  .courses-items {
+    display: flex;
+    gap: 33px;
+    .courses-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 17px 17px;
+      gap: 12px;
+      border: 1px solid #607987;
+      border-radius: 4px;
+      h6 {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 700;
+        font-size: $font20;
+        line-height: 27px;
+        @include df;
+        letter-spacing: -0.4px;
+        color: var(--color-black);
+      }
+      p {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        font-size: $font16;
+        line-height: 24px;
+        @include df;
+        letter-spacing: -0.32px;
+        color: var(--color-blue);
+      }
+    }
+  }
+  #all-courses {
+    padding-top: 16px;
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 700;
+      font-size: $font16;
+      line-height: 19px;
+      @include df;
+      color: var(--color-green);
+    }
+  }
+}
+
+// PARTNERS
+
+#partners {
+  padding: 32px 0;
+  @media (min-width: 390px) {
+    padding: 48px 0;
+  }
+  .partners-head {
+    h1 {
+      @include sectionHead;
+    }
+    p {
+      padding: 24px 0 48px;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font16;
+      line-height: 24px;
+      @include df;
+      color: var(--color-blue);
+    }
+  }
+  .partners-items {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 31px;
+    @media (min-width: 390px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .partners-item {
+      padding: 16px 12px;
+      background: var(--partnersCard-bg);
+      border-radius: 8px;
+      transition: 0.3s;
+      svg {
+        path {
+          filter: contrast(10%);
+        }
+      }
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 2px 18px 3px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        svg {
+          path {
+            filter: contrast(100%);
+          }
+        }
+      }
     }
   }
 }
