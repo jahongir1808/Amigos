@@ -6,6 +6,11 @@ const themeToggler = document.querySelectorAll("#themeToggle");
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
+  console.log(window.innerWidth)
+
+  // if(window.innerWidth > 860){
+  // document.querySelector(".nav__menu-wrapper").style.backdropFilter = "brightness(100%) !important";
+  // }
   if(pageYOffset > 80){
     header.classList.add('shrink')
   } else {

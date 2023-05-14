@@ -35,12 +35,9 @@ header{
         }
         .nav__menu-wrapper{
             flex-grow: 1;
-            opacity: 0;
             @media (max-width: 860px) {
-            opacity: 1;
             position: fixed;
             @include df(end, start, row);
-            backdrop-filter: brightness(100%);
             width: 100%;
             z-index: -1;
             height: 100vh;
