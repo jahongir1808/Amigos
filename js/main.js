@@ -4,6 +4,7 @@ const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 const themeToggler = document.querySelectorAll("#themeToggle");
 const header = document.querySelector("header");
+const heroBg = document.getElementById("heroBg");
 
 
 window.addEventListener("resize", () => {
@@ -25,6 +26,7 @@ themeToggler.forEach(toggle => {
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark")
     if(document.body.classList.contains("dark")){
+      heroBg.getAttribute('src') = 'assets/images/home/dark.svg';
       toggle.innerHTML = `
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.5 0.645996C10.8797 0.645996 11.1875 0.9538 11.1875 1.3335V2.25016C11.1875 2.62986 10.8797 2.93766 10.5 2.93766C10.1203 2.93766 9.8125 2.62986 9.8125 2.25016V1.3335C9.8125 0.9538 10.1203 0.645996 10.5 0.645996Z" fill="white"/>
@@ -39,6 +41,7 @@ themeToggler.forEach(toggle => {
   </svg>
   `
     } else {
+      heroBg.getAttribute('src') = 'assets/images/home/bg-hero-illustration.1d0afd66.svg.svg';
       toggle.innerHTML = `
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M8 0.208328C3.69678 0.208328 0.208336 3.69678 0.208336 7.99999C0.208336 12.3032 3.69678 15.7917 8 15.7917C12.0495 15.7917 15.377 12.7028 15.7558 8.75234C15.7734 8.56848 15.679 8.39201 15.5162 8.3047C15.3534 8.21739 15.1542 8.23632 15.0107 8.3527C14.2227 8.99215 13.2192 9.37499 12.125 9.37499C9.5937 9.37499 7.54167 7.32297 7.54167 4.79166C7.54167 3.28823 8.26506 1.95388 9.38471 1.11736C9.53275 1.00675 9.59988 0.818062 9.55498 0.638806C9.51007 0.459551 9.36191 0.324797 9.17921 0.297047C8.7944 0.238598 8.40059 0.208328 8 0.208328Z" fill="#555555"/>
