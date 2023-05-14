@@ -1214,7 +1214,7 @@ const partners = [
 
 function getpartnersCard(img) {
   return `
-  <div class="partners-item">
+  <div class="item partners-item">
     ${img}
   </div>
   `;
