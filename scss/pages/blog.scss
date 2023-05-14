@@ -1,5 +1,6 @@
 @use "../global";
-@import '../base/reset';
+@import '../global';
+@import '../abstracts/mixins';
 
 #blog{
     background-color: var(--bg-light);
@@ -99,6 +100,34 @@
             body.dark & {
                 color: var(--font-color);
             }
+        }
+
+        &__loadMore{
+            width: 250px;
+            margin: auto;
+            color: red;
+            @include btnBrown(13px 46px, 16px, 700)
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #blog{
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    #blog{
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
     }
 }

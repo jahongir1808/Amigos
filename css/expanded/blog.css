@@ -1,60 +1,9 @@
 @use "../global";
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-:root {
-  --bg-dark: #f1f0ee;
-  --bg-navDark: #f1f0ee;
-  --bg-light: #f9f8f7;
-  --coursesCard-bg: #f9f8f7;
-  --bg-white: #ffffff;
-  --color-brown: #ba8d5b;
-  --color-blue: #607987;
-  --color-green: #0eb182;
-  --color-black: #0f1826;
-  --inpBorder-color: #dadada;
-  --inBg-color: #f7f7f5;
-  --font-color:#000000;
-}
-
-body.dark {
-  --bg-dark: #09111b;
-  --bg-dark-2: #1E1E1E;
-  --bg-navDark: #0f1826;
-  --bg-white: #021923;
-  --bg-light: #0f1826;
-  --font-color:#FFFFFF;
-  --coursesCard-bg: #021923;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  outline: none;
-}
-
-.container {
-  max-width: 1246px;
-  padding: 0 32px;
-  margin: 0 auto;
-}
-
+@use "./base/reset";
+@use "./base/typography";
+@use "./layout/footer";
+@use "./layout/header";
+@use "../abstracts/variables" as *;
 #blog {
   background-color: var(--bg-light);
 }
@@ -175,4 +124,63 @@ body.dark #blog .blog__views-icon {
 
 body.dark #blog .blog__desc {
   color: var(--font-color);
+}
+
+#blog .blog__loadMore {
+  width: 250px;
+  margin: auto;
+  color: red;
+  padding: 13px 46px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ba8d5b;
+  border-radius: 32px;
+  border: none;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  transition: .1s linear;
+  border: 2px solid transparent;
+  -webkit-transition: .1s linear;
+  -moz-transition: .1s linear;
+  -ms-transition: .1s linear;
+  -o-transition: .1s linear;
+  color: white;
+}
+
+body.dark #blog .blog__loadMore {
+  color: black;
+}
+
+#blog .blog__loadMore:hover {
+  background-color: #F5F5F5;
+  color: black;
+  border-color: #ba8d5b;
+}
+
+#blog .blog__loadMore:active {
+  border-color: transparent;
+  background-color: #ba8d5b;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #blog .blog {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #blog .blog {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }

@@ -3,7 +3,7 @@ const data = [];
 
 
 //constants
-const DATA_LIMIT = 6;
+const DATA_LIMIT = 3;
 
 const fetchData = async() => {
     const res = await fetch('./js/data.json')
