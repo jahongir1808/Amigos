@@ -1,4 +1,5 @@
 @use "../global";
+@use '../abstracts/mixins' as *;
 
 #blog{
     background-color: var(--bg-light);
@@ -11,12 +12,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
-        cursor: pointer;
-
-        .blog__image:hover{
-            transform: scale(1.1);
-        }
-
+        
         &__item{
             z-index: 0;
             max-width: 100%;
@@ -37,10 +33,16 @@
             border-radius: 4px;
         }
         &__image{
+            cursor: pointer;
             width: 100%;
             height: auto;
             transition: .3s ease-in-out;
-
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+            
+            
             &-wrapper{
                 width: 100%;
                 height: auto;
@@ -68,6 +70,10 @@
             
             &-icon{
                 margin-right: 6px;
+                fill: rgba(0, 0, 0, 0.35);
+                body.dark & {
+                    fill: #FFFFFF;
+                }
             }
         }
         
@@ -92,6 +98,34 @@
             body.dark & {
                 color: var(--font-color);
             }
+        }
+
+        &__loadMore{
+            display: block;
+            margin: 0 auto;
+            color: red;
+            @include btnBrown(13px 46px, 16px, 700)
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #blog{
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    #blog{
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
     }
 }

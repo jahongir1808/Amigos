@@ -1,9 +1,9 @@
 const container = document.getElementById('blog-wrapper');
+const loadButton = document.getElementById('load');
 const data = []; 
 
-
-//constants
-const DATA_LIMIT = 6;
+let DATA_LENGTH = 0;
+let DATA_LIMIT = 3;
 
 const fetchData = async() => {
     const res = await fetch('./js/data.json')
@@ -51,6 +51,11 @@ const createElement = (item) => {
     desc.textContent = item?.description;
     type.textContent = item?.type;
     views.textContent = item?.views;
+    // viewsWrapper.innerHTML= ` 
+    // <svg>
+    //   <use xlink:href="${svg}"></use>
+    // </svg>
+    // <span class="blog__views">${item?.views}</span>`
     eyeImage.setAttribute('src',  '../assets/images/eye.svg');
     date.textContent = item?.date;
     
@@ -78,7 +83,9 @@ const createElement = (item) => {
 }
 
 const displayData = async() => {
+    container.innerHTML = null; 
     const resData = await fetchData() ;
+    DATA_LENGTH = resData?.length;
     const data = resData?.slice(0, DATA_LIMIT)
 
     data.forEach(element => {
@@ -87,3 +94,17 @@ const displayData = async() => {
 }
 
 displayData();
+
+loadButton.addEventListener('click', () => {
+    if(DATA_LIMIT >= DATA_LENGTH){
+        DATA_LIMIT = 3;
+        loadButton.textContent = "Ko'proq ko'rish" ;  
+        displayData();
+    } else{
+        DATA_LIMIT = DATA_LIMIT+=3;
+        displayData();    
+        if(DATA_LIMIT>=DATA_LENGTH)
+        loadButton.textContent = "Kamroq ko'rish" ;   
+
+    }
+})
