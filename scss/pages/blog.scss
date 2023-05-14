@@ -1,9 +1,8 @@
 @use "../global";
-@import '../base/reset';
 
 #blog{
     background-color: var(--bg-light);
-    
+    font-family: Lato;
     body.dark & {
         background-color: var(--bg-dark-2);
     }
@@ -24,6 +23,8 @@
             position: relative;
             width: 100%;
             margin-bottom: 36px;
+            .blog__type{
+            }
         }
         &__type{
             position: absolute;
@@ -54,7 +55,6 @@
             padding: 14px 0;
             display: flex;
             justify-content: space-between;
-            font-family: Lato;
             
             body.dark & {
                 color: #FFFFFF;
@@ -73,7 +73,6 @@
         
         &__title{
             width: 100%;
-            font-family: 'Lato';
             font-style: normal;
             font-weight: 700;
             font-size: 18px;
@@ -84,7 +83,6 @@
         }
         &__desc{
             margin-top: 14px;
-            font-family: 'Lato';
             font-style: normal;
             font-weight: 500;
             font-size: 14px;
