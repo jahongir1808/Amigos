@@ -107,7 +107,6 @@
   }
   .courses-items {
     display: flex;
-    padding: 24px 0 18px;
     gap: 33px;
     .courses-item {
       display: flex;
@@ -161,16 +160,6 @@
   @media (min-width: 390px) {
     padding: 48px 0;
   }
-  .owl-nav,
-  .owl-dots {
-    display: block;
-  }
-  @media (min-width: 900px) {
-    .owl-nav,
-    .owl-dots {
-      display: none;
-    }
-  }
   .partners-head {
     h1 {
       @include sectionHead;
@@ -181,6 +170,24 @@
   }
   .partners-items {
     padding-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 31px;
+    @media (max-width: 850px) {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+        overflow-x: auto;
+      }
+    }
+    @media (min-width: 850px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: 1000px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
     .partners-item {
       padding: 16px 12px;
       background: var(--partnersCard-bg);
@@ -206,6 +213,7 @@
 }
 
 // REVIEWS
+
 #reviews {
   .reviews-head {
     h1 {
@@ -215,13 +223,12 @@
       @include sectionText;
     }
   }
-  .owl-carousel .owl-dots.disabled,
-  .owl-carousel .owl-nav.disabled {
-    display: block !important;
-  }
-  .owl-carousel {
+  .reviews-items {
     padding: 48px 0 30px;
-    .reviews_item {
+    display: grid;
+    grid-gap: 55px;
+    grid-template-columns: repeat(4, 1fr);
+    .reviews-item {
       position: relative;
       .reviews_item-video {
         width: 100%;

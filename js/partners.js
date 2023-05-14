@@ -1225,7 +1225,6 @@ let partnersCard = document.querySelector(".partners-items");
 function getpartnersCards(products) {
   partnersCard.innerHTML = "";
   for (el of products) {
-    console.log(el);
     partnersCard.innerHTML += getpartnersCard(el.image);
   }
 }
