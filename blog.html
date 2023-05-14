@@ -113,11 +113,41 @@
     </div>
   </nav>
   </header>
-  <main>
-    <section id="blog">
-      <div class="container blog" id="blog-wrapper">
+  <main id="blog">
+    <section id="navigation" class="container">
+      <div class="blog__navlink-wrapper">
+        <a href="/" class="blog__navlink  blog__navlink-item">Bosh sahifa</a>
+        <svg class="blog__navlink-item" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1_5785)">
+          <path d="M1.56348 3H9.89681" stroke="#C4C4C4" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.23047 1.3335L9.89714 3.00016L8.23047 4.66683" stroke="#C4C4C4" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1_5785">
+          <rect width="10" height="5" fill="white" transform="translate(0.730469 0.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+          
+        <a href="/blog.html" class="blog__navlink active blog__navlink-item">Bloglar</a>
 
       </div>
+
+      <div class="blog__filter" id="filter">
+        <button class="blog__filter-button" id="Barchasi">Barchasi</button>
+        <button class="blog__filter-button" id="Bitiruv marosimi">Bitiruv marosimi</button>
+        <button class="blog__filter-button" id="Master-klass">Master-klass</button>
+        <button class="blog__filter-button" id="Musobaqa">Musobaqa</button>
+        <button class="blog__filter-button" id="Dasturlash">Dasturlash</button>
+        <button class="blog__filter-button" id="Najot Quiz">Najot Quiz</button>
+      </div>
+
+    </section>
+    <section id="blog-data-wrapper" class="container">
+      <div class="blog" id="blog-wrapper">
+
+      </div>
+      <button class="blog__loadMore" id="load">Ko'proq ko'rish</button>
 
     </section>
   </main>
