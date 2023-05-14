@@ -1,15 +1,33 @@
 const container = document.getElementById('blog-wrapper');
 const loadButton = document.getElementById('load');
-const data = []; 
+const filterWrapper = document.getElementById('filter');
+const filterButtons = document.querySelectorAll('.blog__filter-button');
 
 let DATA_LENGTH = 0;
-let DATA_LIMIT = 3;
+let DATA_LIMIT = 6;
+let chosenFilter = 'Barchasi';
+
 
 const fetchData = async() => {
     const res = await fetch('./js/data.json')
     const data = await res.json();
-    console.log(data);
     return data;
+}
+
+const filterData = async() => {   
+    const resData = await fetchData() ;
+    let filteredData = [];
+    console.log(resData, chosenFilter);
+    
+    if(chosenFilter === "Barchasi"){
+        filteredData = [...resData]
+    } else{
+        filteredData = [...resData.filter(data => data.type == chosenFilter)];
+    }
+    
+    DATA_LENGTH = filteredData?.length;
+    const data = filteredData?.slice(0, DATA_LIMIT)
+    return data
 }
 
 const createDOMElement = tegName => {
@@ -29,7 +47,7 @@ const createElement = (item) => {
     const eyeImage = createDOMElement('img');
     const date = createDOMElement('span');
     const blogDateAndViewsWrapper = createDOMElement('div')
-
+    
     //add attribute
     blogItem.setAttribute('id', item?.id)
     blogItem.setAttribute('class', 'blog__item');
@@ -43,7 +61,7 @@ const createElement = (item) => {
     eyeImage.setAttribute('class', 'blog__views-icon')
     date.setAttribute('class', 'blog__date');
     blogDateAndViewsWrapper.setAttribute('class', 'blog__header-wrapper');
-
+    
     
     //add content
     title.textContent = item?.title;
@@ -70,30 +88,43 @@ const createElement = (item) => {
     blogItem.appendChild(blogDateAndViewsWrapper);
     blogItem.appendChild(title);
     blogItem.appendChild(desc);
-
+    
     //appended by container
     container.appendChild(blogItem);
-
+    
     //hover styles
     if(blogItem.hover){
         image.styles.transform.scale = 1.1
     }
- 
     
+    
+}
+
+const createNotFoundContent = () => {
+    container.innerHTML = "Kechirasiz, ma'lumot topilmadi :(";
+    container.classList.add('blog__empty');
 }
 
 const displayData = async() => {
     container.innerHTML = null; 
-    const resData = await fetchData() ;
-    DATA_LENGTH = resData?.length;
-    const data = resData?.slice(0, DATA_LIMIT)
-
-    data.forEach(element => {
-        createElement(element)
-    });    
+    const data = await filterData();
+    console.log(data); 
+    if(data.length){
+        container.classList.remove('blog__empty');
+        data.forEach(element => {
+            createElement(element);
+        });    
+    } else{
+        createNotFoundContent();
+    }
+    if(DATA_LIMIT > 6){
+        window.scrollTo({
+            top: loadButton.offsetTop,
+            behavior: 'smooth' // Optional smooth scrolling animation
+          });
+    }
 }
 
-displayData();
 
 loadButton.addEventListener('click', () => {
     if(DATA_LIMIT >= DATA_LENGTH){
@@ -105,6 +136,38 @@ loadButton.addEventListener('click', () => {
         displayData();    
         if(DATA_LIMIT>=DATA_LENGTH)
         loadButton.textContent = "Kamroq ko'rish" ;   
-
     }
 })
+
+// Filters
+
+const removeActiveClasses = () => {
+    filterButtons.forEach(button => {
+        button.classList.remove('active')
+    })
+}
+
+const addActiveClass = () => {
+    filterButtons.forEach(button => {
+        if(button.id === chosenFilter){
+            button.classList.add('active')
+        } 
+    })
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        if(chosenFilter !== e.target?.id){
+            chosenFilter = e.target?.id;
+            displayData(); 
+        } 
+        removeActiveClasses()
+        addActiveClass();
+        
+    })
+})
+
+addActiveClass();
+displayData();
+
+targetElement.scrollIntoView({ behavior: 'smooth' });

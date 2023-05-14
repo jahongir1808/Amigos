@@ -7,6 +7,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: Lato;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
