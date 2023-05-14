@@ -1,6 +1,5 @@
 @use "../global";
-@import '../global';
-@import '../abstracts/mixins';
+@use '../abstracts/mixins';
 
 #blog{
     background-color: var(--bg-light);
@@ -103,8 +102,8 @@
         }
 
         &__loadMore{
-            width: 250px;
-            margin: auto;
+            display: block;
+            margin: 0 auto;
             color: red;
             @include btnBrown(13px 46px, 16px, 700)
         }
