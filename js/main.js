@@ -80,21 +80,40 @@ lists2.forEach(list => {
   })
 })
 
-const videoOne = document.querySelector(".review-videoOne");
-const videoTwo = document.querySelector(".review-videoTwo");
-const videoThree = document.querySelector(".review-videoThree");
-const videoFour = document.querySelector(".review-videoFour");
-const buttonVideoOne = document.querySelector(".buttonVideoOne");
-const buttonVideoTwo = document.querySelector(".buttonVideoTwo");
-const buttonVideoThree = document.querySelector(".buttonVideoThree");
-const buttonVideoFour = document.querySelector(".buttonVideoFour");
+const videoOne = document.getElementById("review-videoOne");
+const videoTwo = document.getElementById("review-videoTwo");
+const videoThree = document.getElementById("review-videoThree");
+const videoFour = document.getElementById("review-videoFour");
+const buttonVideoOne = document.getElementById("buttonVideoOne");
+const buttonVideoTwo = document.getElementById("buttonVideoTwo");
+const buttonVideoThree = document.getElementById("buttonVideoThree");
+const buttonVideoFour = document.getElementById("buttonVideoFour");
 
 buttonVideoOne.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playButton.innerHTML = "Pause";
+  if (videoOne.paused) {
+    videoOne.play();
   } else {
-    video.pause();
-    playButton.innerHTML = "Play";
+    videoOne.pause();
+  }
+});
+buttonVideoTwo.addEventListener("click", () => {
+  if (videoTwo.paused) {
+    videoTwo.play();
+  } else {
+    videoTwo.pause();
+  }
+});
+buttonVideoThree.addEventListener("click", () => {
+  if (videoThree.paused) {
+    videoThree.play();
+  } else {
+    videoThree.pause();
+  }
+});
+buttonVideoFour.addEventListener("click", () => {
+  if (videoFour.paused) {
+    videoFour.play();
+  } else {
+    videoFour.pause();
   }
 });
