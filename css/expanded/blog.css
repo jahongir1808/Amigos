@@ -33,16 +33,16 @@ a {
   --inpBorder-color: #dadada;
   --inBg-color: #f7f7f5;
   --themetoggle-color: #f5f5f5;
-  --font-color:#000000;
+  --font-color: #000000;
 }
 
 body.dark {
   --bg-dark: #09111b;
-  --bg-dark-2: #1E1E1E;
+  --bg-dark-2: #1e1e1e;
   --bg-navDark: #0f1826;
   --bg-white: #021923;
   --bg-light: #0f1826;
-  --font-color:#FFFFFF;
+  --font-color: #ffffff;
   --coursesCard-bg: #021923;
   --partnersCard-bg: #c9c9c9;
   --themetoggle-color: #272727;
@@ -231,7 +231,12 @@ footer .footer__wrapper-content-menu ul.headerListItem2 {
     z-index: -1;
     margin-bottom: 1rem;
   }
-  footer .footer__wrapper-content-menu ul.headerListItem2.open li:nth-child(1) span svg {
+  footer
+    .footer__wrapper-content-menu
+    ul.headerListItem2.open
+    li:nth-child(1)
+    span
+    svg {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -266,7 +271,12 @@ footer .footer__wrapper-content-menu ul.headerListItem2 li:nth-child(1) span {
   footer .footer__wrapper-content-menu ul.headerListItem2 li:nth-child(1) span {
     display: flex;
   }
-  footer .footer__wrapper-content-menu ul.headerListItem2 li:nth-child(1) span svg {
+  footer
+    .footer__wrapper-content-menu
+    ul.headerListItem2
+    li:nth-child(1)
+    span
+    svg {
     transition: 0.1s linear;
     -webkit-transition: 0.1s linear;
     -moz-transition: 0.1s linear;
@@ -339,7 +349,10 @@ footer .footer__wrapper-content-contact div p:first-child {
   letter-spacing: -0.32px;
   color: var(--color-black);
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -348,39 +361,120 @@ footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-soc
   width: 100%;
   gap: 12px;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div {
   width: 25px;
   height: 25px;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div a svg {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div
+  a
+  svg {
   transition: 0.3s linear;
   -webkit-transition: 0.3s linear;
   -moz-transition: 0.3s linear;
   -ms-transition: 0.3s linear;
   -o-transition: 0.3s linear;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(1) a:hover svg path {
-  fill: #0088CC !important;
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(1)
+  a:hover
+  svg
+  path {
+  fill: #0088cc !important;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(2) a:hover svg path {
-  fill: #0B84EE !important;
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(2)
+  a:hover
+  svg
+  path {
+  fill: #0b84ee !important;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(3) a:hover svg path {
-  fill: #FF0000 !important;
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(3)
+  a:hover
+  svg
+  path {
+  fill: #ff0000 !important;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(5) a:hover svg path {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(5)
+  a:hover
+  svg
+  path {
   fill: #0072b1 !important;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(5) svg g path:last-child {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(5)
+  svg
+  g
+  path:last-child {
   fill: var(--bg-light) !important;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(4) a:hover svg {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  a:hover
+  svg {
   color: #0040ff;
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(4) a:hover svg path:nth-child(1) {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  a:hover
+  svg
+  path:nth-child(1) {
   fill: url(#myGradient);
 }
-footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(4) svg g path:nth-child(2), footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(4) svg g path:nth-child(3), footer .footer__wrapper-content-contact div .footer__wrapper-content-contact-socials div:nth-child(4) svg g path:nth-child(4) {
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  svg
+  g
+  path:nth-child(2),
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  svg
+  g
+  path:nth-child(3),
+footer
+  .footer__wrapper-content-contact
+  div
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  svg
+  g
+  path:nth-child(4) {
   fill: var(--bg-light) !important;
 }
 footer .footer__wrapper-content-contact p {
@@ -396,10 +490,32 @@ footer .footer__wrapper-content-contact-socials {
 footer .footer__wrapper-content-contact-socials div {
   width: 20%;
 }
-footer .footer__wrapper-content-contact-socials div:nth-child(5) svg g path:last-child {
+footer
+  .footer__wrapper-content-contact-socials
+  div:nth-child(5)
+  svg
+  g
+  path:last-child {
   fill: var(--bg-light) !important;
 }
-footer .footer__wrapper-content-contact-socials div:nth-child(4) svg g path:nth-child(2), footer .footer__wrapper-content-contact-socials div:nth-child(4) svg g path:nth-child(3), footer .footer__wrapper-content-contact-socials div:nth-child(4) svg g path:nth-child(4) {
+footer
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  svg
+  g
+  path:nth-child(2),
+footer
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  svg
+  g
+  path:nth-child(3),
+footer
+  .footer__wrapper-content-contact-socials
+  div:nth-child(4)
+  svg
+  g
+  path:nth-child(4) {
   fill: var(--bg-light) !important;
 }
 
@@ -473,7 +589,11 @@ header nav .nav__menu ul li {
   font-weight: 100;
   margin: 37px;
 }
-header nav .nav__menu ul li:nth-child(3), header nav .nav__menu ul li:nth-child(4), header nav .nav__menu ul li:nth-child(5), header nav .nav__menu ul li:nth-child(6), header nav .nav__menu ul li:nth-child(7) {
+header nav .nav__menu ul li:nth-child(3),
+header nav .nav__menu ul li:nth-child(4),
+header nav .nav__menu ul li:nth-child(5),
+header nav .nav__menu ul li:nth-child(6),
+header nav .nav__menu ul li:nth-child(7) {
   display: none;
 }
 header nav .nav__menu ul li a {
@@ -832,7 +952,7 @@ body.dark #blog {
   top: 8px;
   left: 8px;
   padding: 5px 12px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 0px 2px #000000;
   border-radius: 4px;
 }
@@ -860,7 +980,7 @@ body.dark #blog {
   justify-content: space-between;
 }
 body.dark #blog .blog__header-wrapper {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 #blog .blog__views-wrapper {
   display: flex;
@@ -871,7 +991,7 @@ body.dark #blog .blog__header-wrapper {
   fill: rgba(0, 0, 0, 0.35);
 }
 body.dark #blog .blog__views-icon {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 #blog .blog__title {
   width: 100%;
@@ -921,7 +1041,7 @@ body.dark #blog .blog__loadMore {
   color: black;
 }
 #blog .blog__loadMore:hover {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   color: black;
   border-color: #ba8d5b;
 }
@@ -937,10 +1057,10 @@ body.dark #blog .blog__loadMore {
   line-height: 22px;
   display: flex;
   align-items: center;
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 #blog .blog__navlink.active {
-  color: #BA8D5B;
+  color: #ba8d5b;
 }
 #blog .blog__navlink-wrapper {
   margin-bottom: 32px;
@@ -1009,7 +1129,7 @@ body.dark #blog .blog__filter-button.active {
   color: black;
 }
 #blog .blog__filter-button.active:hover {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   color: black;
   border-color: #ba8d5b;
 }
