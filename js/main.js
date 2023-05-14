@@ -1,20 +1,30 @@
 const lists = document.querySelectorAll(".headerListItem");
+const lists2 = document.querySelectorAll(".headerListItem2");
 const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 const themeToggler = document.querySelectorAll("#themeToggle");
 const header = document.querySelector("header");
 
+
+window.addEventListener("resize", () => {
+  if(window.innerWidth > 860){
+    document.querySelector(".nav__menu-wrapper").style.zIndex = "-9999";
+    document.querySelector(".nav__menu-wrapper").style.right = "-150%";
+    document.querySelector(".nav__menu-wrapper").style.backdropFilter = "brightness(100%)";
+    document.querySelector(".nav__menu").style.right = "-150%";
+  };
+})
 window.addEventListener("scroll", () => {
   if(pageYOffset > 80){
     header.classList.add('shrink')
   } else {
-    header.classList.remove('shrink')
+    header.classList.remove("shrink");
   }
-})
-themeToggler.forEach(toggle => {
+});
+themeToggler.forEach((toggle) => {
   toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark")
-    if(document.body.classList.contains("dark")){
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) {
       toggle.innerHTML = `
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.5 0.645996C10.8797 0.645996 11.1875 0.9538 11.1875 1.3335V2.25016C11.1875 2.62986 10.8797 2.93766 10.5 2.93766C10.1203 2.93766 9.8125 2.62986 9.8125 2.25016V1.3335C9.8125 0.9538 10.1203 0.645996 10.5 0.645996Z" fill="white"/>
@@ -27,31 +37,33 @@ themeToggler.forEach(toggle => {
   <path d="M2.9375 10.5002C2.9375 10.8799 2.6297 11.1877 2.25 11.1877H1.33333C0.953637 11.1877 0.645833 10.8799 0.645833 10.5002C0.645833 10.1205 0.953637 9.81266 1.33333 9.81266H2.25C2.6297 9.81266 2.9375 10.1205 2.9375 10.5002Z" fill="white"/>
   <path d="M5.15246 16.8199C5.42094 16.5514 5.42094 16.1161 5.15246 15.8476C4.88397 15.5792 4.44867 15.5792 4.18018 15.8476L3.532 16.4958C3.26352 16.7643 3.26352 17.1996 3.532 17.4681C3.80049 17.7366 4.23579 17.7366 4.50427 17.4681L5.15246 16.8199Z" fill="white"/>
   </svg>
-  `
+  `;
     } else {
       toggle.innerHTML = `
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M8 0.208328C3.69678 0.208328 0.208336 3.69678 0.208336 7.99999C0.208336 12.3032 3.69678 15.7917 8 15.7917C12.0495 15.7917 15.377 12.7028 15.7558 8.75234C15.7734 8.56848 15.679 8.39201 15.5162 8.3047C15.3534 8.21739 15.1542 8.23632 15.0107 8.3527C14.2227 8.99215 13.2192 9.37499 12.125 9.37499C9.5937 9.37499 7.54167 7.32297 7.54167 4.79166C7.54167 3.28823 8.26506 1.95388 9.38471 1.11736C9.53275 1.00675 9.59988 0.818062 9.55498 0.638806C9.51007 0.459551 9.36191 0.324797 9.17921 0.297047C8.7944 0.238598 8.40059 0.208328 8 0.208328Z" fill="#555555"/>
   </svg>
-  `
+  `;
     }
-  })
-})
+  });
+});
 
 openNav.addEventListener("click", () => {
   document.querySelector(".nav__menu-wrapper").style.zIndex = "9999999999";
   document.querySelector(".nav__menu-wrapper").style.left = "0";
-  document.querySelector(".nav__menu-wrapper").style.backdropFilter = "brightness(50%)";
+  document.querySelector(".nav__menu-wrapper").style.backdropFilter =
+    "brightness(50%)";
   document.querySelector(".nav__menu").style.right = "0%";
-})
+});
 closeNav.addEventListener("click", () => {
-  document.querySelector(".nav__menu-wrapper").style.zIndex = "-1";
+  document.querySelector(".nav__menu-wrapper").style.zIndex = "-9999";
   document.querySelector(".nav__menu-wrapper").style.right = "-150%";
-  document.querySelector(".nav__menu-wrapper").style.backdropFilter = "brightness(100%)";
+  document.querySelector(".nav__menu-wrapper").style.backdropFilter =
+    "brightness(100%)";
   document.querySelector(".nav__menu").style.right = "-150%";
-})
+});
 
-lists.forEach(list => {
+lists.forEach((list) => {
   list.addEventListener("click", () => {
     lists.forEach(list2 => {
       list2.classList.remove("open")
@@ -59,39 +71,30 @@ lists.forEach(list => {
     list.classList.add("open")
   })
 })
+lists2.forEach(list => {
+  list.addEventListener("click", () => {
+    lists2.forEach(list2 => {
+      list2.classList.remove("open")
+    })
+    list.classList.add("open")
+  })
+})
 
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            elmnt.innerHTML = this.responseText;
-          }
-          if (this.status == 404) {
-            elmnt.innerHTML = "Page not found.";
-          }
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      };
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
-    }
+const videoOne = document.querySelector(".review-videoOne");
+const videoTwo = document.querySelector(".review-videoTwo");
+const videoThree = document.querySelector(".review-videoThree");
+const videoFour = document.querySelector(".review-videoFour");
+const buttonVideoOne = document.querySelector(".buttonVideoOne");
+const buttonVideoTwo = document.querySelector(".buttonVideoTwo");
+const buttonVideoThree = document.querySelector(".buttonVideoThree");
+const buttonVideoFour = document.querySelector(".buttonVideoFour");
+
+buttonVideoOne.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    playButton.innerHTML = "Pause";
+  } else {
+    video.pause();
+    playButton.innerHTML = "Play";
   }
-}
-
-includeHTML();
-
-
+});

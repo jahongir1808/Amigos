@@ -38,7 +38,6 @@ header{
             @media (max-width: 860px) {
             position: fixed;
             @include df(end, start, row);
-            backdrop-filter: brightness(100%);
             width: 100%;
             z-index: -1;
             height: 100vh;
@@ -72,6 +71,7 @@ header{
                     @media (max-width: 860px) {
                         overflow: hidden !important;
                         display: flex !important;
+                        background-color: transparent;
                         font-size: $font16;
                         font-weight: 500;
                         color: var(--color-black);
@@ -79,7 +79,23 @@ header{
                         float: none;
                         margin: 5px;
                         padding: 0 12px;
-                        max-height: 25px;
+                        max-height: 20px;
+                        p{
+                        width: 222px;
+                        @include df(space-between, center, row);
+                        span{
+                            svg{
+                                path{
+                                    stroke: var(--color-black);
+                                }
+                                transition: .1s linear;
+                                -webkit-transition: .1s linear;
+                                -moz-transition: .1s linear;
+                                -ms-transition: .1s linear;
+                                -o-transition: .1s linear;
+                            }
+                        }
+                        }
                         transition: max-height .5s linear;
                         -webkit-transition: max-height .5s linear;
                         -moz-transition: max-height .5s linear;
@@ -119,6 +135,17 @@ header{
                             -moz-transition: max-height .5s linear;
                             -ms-transition: max-height .5s linear;
                             -o-transition: max-height .5s linear;
+                            p{
+                                span{
+                                    svg{
+                                        transform: rotate(180deg);
+                                        -webkit-transform: rotate(180deg);
+                                        -moz-transform: rotate(180deg);
+                                        -ms-transform: rotate(180deg);
+                                        -o-transform: rotate(180deg);
+}
+                                }
+                            }
                         }
                         .li__header{
                             height: 25px !important;
@@ -136,6 +163,9 @@ header{
                                     a{
                                         font-weight: 400;
                                         color: var(--color-blue);
+                                        body.dark &{
+                                            color: rgba(255, 255, 255, .5);
+                                        }
                                     }
                                 }
                             }
@@ -196,7 +226,7 @@ header{
             -moz-transition: .3s linear;
             -ms-transition: .3s linear;
             -o-transition: .3s linear;
-} 
+        } 
         }
         .nav__buttons{
             @include df(space-between, center, row);
