@@ -1,13 +1,27 @@
+@use "../base/typography";
+@use "../abstracts/variables" as *;
+
 @mixin df($jc, $ai, $fd) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    flex-direction: $fd;
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
 }
 
-@mixin btn($padding, $fontSize, $fontWeight){
-    padding: $padding;
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-    background-color: #BA8D5B;
+@mixin btn($padding, $fontSize, $fontWeight) {
+  padding: $padding;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  background-color: #ba8d5b;
+}
+
+@mixin sectionHead {
+  font-family: Lato;
+  font-weight: 800;
+  font-size: var($font32);
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.64px;
+  color: #0f1826;
 }
