@@ -2,6 +2,315 @@
 @use "../abstracts/mixins" as *;
 
 footer{
+    font-family: Lato;
     width: 100%;
     background-color: var(--bg-light);
+    padding-top: 26px;
+    padding-bottom: 36px;
+    .footer__wrapper{
+        @include df(space-between, start, row);
+        @media (max-width: 750px) {
+            flex-direction: column;
+        }
+        gap: 2.5rem;
+        @media (max-width: 550px) {
+            gap: 0;
+        }
+        &-rights{
+        @include df(start, start, column);
+        max-width: 239px;
+        @media (max-width: 750px) {
+            width: 100%;
+            max-width: 100%;
+            @include df(start, start, column);
+            padding-bottom: 2rem;
+        }
+        svg{
+            margin-bottom: 20px;
+        }
+        p{
+            color: var(--color-blue);
+            font-size: $font14;
+            font-weight: 600;
+            &:last-child{
+                padding-top: 58px;
+                @media (max-width: 750px) {
+                    padding-top: 1rem;
+                }
+            }
+        }
+        }
+        &-content{
+            @include df(start, start, column);
+            width: calc(100% - 239px);
+            height: 100%;
+            @media (max-width: 750px) {
+                width: 100%;
+            }
+            &-menu{
+                width: 100%;
+                gap: 1rem;
+                padding-bottom: 3rem;
+                @include df(center, start, row);
+                @media (max-width: 750px) {
+                    padding-bottom: 1rem;
+                }
+                @media (max-width: 550px) {
+                    @include df(start, start, column);
+                }
+                ul.headerListItem2{
+                    width: calc(100% / 3 - 1rem);
+                    cursor: pointer;
+                    @media (max-width: 550px) {
+                        width: 100%;
+                        max-height: 20px;
+                        overflow: hidden;
+                        transition: max-height .5s linear;
+                        -webkit-transition: max-height .5s linear;
+                        -moz-transition: max-height .5s linear;
+                        -ms-transition: max-height .5s linear;
+                        -o-transition: max-height .5s linear;
+                        &.open{
+                            max-height: 500px;
+                            transition: max-height .5s linear;
+                            -webkit-transition: max-height .5s linear;
+                            -moz-transition: max-height .5s linear;
+                            -ms-transition: max-height .5s linear;
+                            -o-transition: max-height .5s linear;
+                            li{
+                                &:nth-child(1){
+                                    span{
+                                        svg{
+                                            transform: rotate(180deg);
+                                            -webkit-transform: rotate(180deg);
+                                            -moz-transform: rotate(180deg);
+                                            -ms-transform: rotate(180deg);
+                                            -o-transform: rotate(180deg);
+                                        }
+                                    }
+                                }
+                                z-index: -1;
+                                margin-bottom: 1rem;
+                                a{
+                                    font-size: $font14;
+                                    color: var(--color-blue);
+                                    font-weight: 600;
+                                    letter-spacing: -0.28px;
+                                }
+                            }
+                        }
+                    }
+                    li{
+                        &:nth-child(1){
+                            padding-bottom: 34px;
+                            color: var(--color-black);
+                            font-size: $font16;
+                            font-weight: 700;
+                            @include df(space-between, center, row);
+                            span{
+                                display: none;
+                                @media (max-width: 550px) {
+                                    display: flex;
+                                    svg{
+                                        transition: .1s linear;
+                                        -webkit-transition: .1s linear;
+                                        -moz-transition: .1s linear;
+                                        -ms-transition: .1s linear;
+                                        -o-transition: .1s linear;
+                                    }
+                                }
+                            }
+                            @media (max-width: 550px) {
+                                padding-bottom: 0;
+                            }
+                        }
+                        z-index: -1;
+                        margin-bottom: 1rem;
+                        a{
+                            font-size: $font14;
+                            color: var(--color-blue);
+                            font-weight: 600;
+                            letter-spacing: -0.28px;
+                        }
+                    }
+                }
+            }
+            &-contact{
+                @include df(start, center, row);
+                gap: 1rem;
+                width: 100%;
+                padding-top: 3rem;
+                @media (max-width: 750px) {
+                    padding-top: 1rem;
+                }
+                @media (max-width: 550px) {
+                    @include df(start, center, column);
+                }
+                border-top: 1px solid rgba(129, 117, 92, 0.3);
+                div{
+                    @include df(start, start, column);
+                    gap: 1rem;
+                    width: calc(100% / 3 - 1rem);
+                    @media (max-width: 550px) {
+                        width: 100%;
+                    }
+                    &:first-child{
+                        p{
+                            &:last-child{
+                                font-size: $font14;
+                                font-weight: 600;
+                                letter-spacing: -0.28px;
+                                color: var(--color-blue);
+                            }
+                        }
+                    }
+                    a{
+                        font-size: $font18;
+                        font-weight: 600;
+                        letter-spacing: -0.28px;
+                        color: var(--color-blue);
+                    }
+                    p{
+                        &:first-child{
+                            font-size: $font16;
+                            font-weight: 700;
+                            letter-spacing: -0.32px;
+                            color: var(--color-black);
+                        }
+                    }
+                    .footer__wrapper-content-contact-socials{
+                        @include df(start, start, row);
+                        flex-wrap: wrap;
+                        width: 100%;
+                        gap: 12px;
+                        div{
+                            width: 25px;
+                            height: 25px;
+                            a{
+                                svg{
+                                    transition: .3s linear;
+                                    -webkit-transition: .3s linear;
+                                    -moz-transition: .3s linear;
+                                    -ms-transition: .3s linear;
+                                    -o-transition: .3s linear;
+                                }
+                            }
+                            &:nth-child(1){
+                                a{
+                                    &:hover{
+                                        svg{
+                                            path{
+                                                fill: #0088CC !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                a{
+                                    &:hover{
+                                        svg{
+                                            path{
+                                                fill: #0B84EE !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(3){
+                                a{
+                                    &:hover{
+                                        svg{
+                                            path{
+                                                fill: #FF0000 !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(5){
+                                a{
+                                    &:hover{
+                                        svg{
+                                            path{
+                                                fill: #0072b1 !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            svg{
+                                    g{
+                                        path{
+                                            &:last-child{
+                                                fill: var(--bg-light) !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(4){
+                                a{
+                                    &:hover{
+                                        svg{
+                                            color: #0040ff;
+                                            path{
+                                                &:nth-child(1){
+                                                    fill: url(#myGradient)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                svg{
+                                    g{
+                                        path{
+                                            &:nth-child(2),
+                                            &:nth-child(3),
+                                            &:nth-child(4) {
+                                                fill: var(--bg-light) !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                p{
+                    max-width: 216px;
+                }
+                &-socials{
+                    @include df(start, start, row);
+                    width: 100%;
+                    div{
+                        width: calc(100% / 5);
+                        &:nth-child(5){
+                        svg{
+                                g{
+                                    path{
+                                        &:last-child{
+                                            fill: var(--bg-light) !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(4){
+                            svg{
+                                g{
+                                    path{
+                                        &:nth-child(2),
+                                        &:nth-child(3),
+                                        &:nth-child(4) {
+                                            fill: var(--bg-light) !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

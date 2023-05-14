@@ -1,4 +1,5 @@
 const lists = document.querySelectorAll(".headerListItem");
+const lists2 = document.querySelectorAll(".headerListItem2");
 const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 const themeToggler = document.querySelectorAll("#themeToggle");
@@ -54,6 +55,14 @@ closeNav.addEventListener("click", () => {
 lists.forEach(list => {
   list.addEventListener("click", () => {
     lists.forEach(list2 => {
+      list2.classList.remove("open")
+    })
+    list.classList.add("open")
+  })
+})
+lists2.forEach(list => {
+  list.addEventListener("click", () => {
+    lists2.forEach(list2 => {
       list2.classList.remove("open")
     })
     list.classList.add("open")
