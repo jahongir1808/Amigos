@@ -483,6 +483,7 @@ header nav .nav__buttons button:last-child span {
 }
 
 #blog {
+  padding-top: 32px;
   background-color: var(--bg-white);
   font-family: Lato;
 }
@@ -621,7 +622,7 @@ body.dark #blog .blog__loadMore {
   color: #BA8D5B;
 }
 #blog .blog__navlink-wrapper {
-  margin: 32px 0;
+  margin-bottom: 32px;
   display: flex;
   align-items: center;
 }
@@ -643,10 +644,10 @@ body.dark #blog .blog__loadMore {
   padding: 16px 26px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #F7F7F5;
+  background-color: var(--bg-white);
   border-radius: 32px;
   font-family: Lato;
-  color: black;
+  color: var(--font-color);
   border: 2px solid transparent;
   transition: 0.1s linear;
   -webkit-transition: 0.1s linear;
