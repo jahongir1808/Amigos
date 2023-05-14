@@ -93,3 +93,14 @@ header nav {
   align-items: center;
   flex-direction: row;
 }
+
+#workplaces {
+  padding: 48px 0;
+  background-color: var(--bg-white);
+}
+#workplaces .workplaces-items {
+  padding: 48px 0 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px 45px;
+}
